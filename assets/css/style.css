@@ -1,0 +1,750 @@
+/*font-family: 'Poppins', sans-serif;*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background: #fcfafa;
+}
+
+/*Start Menu Section*/
+.menu_bg {
+    background: #fff;
+}
+
+.menu_area {}
+
+.logo {}
+
+.logo img {
+    max-width: 180px;
+    max-height: 80px;
+}
+
+.main_logo {}
+
+.menu {}
+
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {}
+
+.menu ul li a {
+    display: inline-block;
+    font-size: 18px;
+    color: #000;
+    padding: 5px 20px;
+}
+
+/*End Menu Section*/
+/*Responsive Menu Start*/
+.responsive_menu {
+    display: none;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {
+        overflow-y: auto;
+    }
+
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/*Responsive Menu End*/
+.my_hover {
+    text-align: center;
+    font-weight: 500;
+}
+
+.my_hover * {
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.my_hover li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0 1.5em;
+    overflow: hidden;
+}
+
+.my_hover a {
+    padding: 0.3em 0;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 0;
+    text-decoration: none;
+}
+
+.my_hover a:before,
+.my_hover a:after {
+    position: absolute;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.my_hover a:before {
+    bottom: 100%;
+    display: block;
+    height: 3px;
+    width: 100%;
+    content: "";
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+
+}
+
+.my_hover a:after {
+    padding: 0.3em 0;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    content: attr(data-hover);
+    color: #0b0804;
+    white-space: nowrap;
+    padding-left: 25px;
+    width: 100%;
+}
+
+.my_hover li:hover a,
+.my_hover .current a {
+    transform: translateY(100%);
+}
+
+/*Menu Hover End*/
+/*Start Banner Section*/
+.mani_banner_area {
+    background: url(../images/header_bg.jpg) no-repeat fixed 0 0 / 100% 100%;
+    padding: 120px 0px;
+    text-align: center;
+}
+
+.banner_text {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.banner_text h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #ffffff;
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px 0px;
+}
+
+.banner_text p {
+    font-size: 22px;
+    font-weight: 400;
+    color: #ffffff;
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px 0px;
+}
+
+.donate_btn {}
+
+.btn_edit a {
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    display: inline-block;
+}
+
+.btn_edit {
+    border-radius: 4px;
+    background-color: #5ca1e1;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    padding: 16px;
+    width: 280px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+    background: rgba(255, 12, 12, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btn_edit {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn_edit:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 5px;
+    right: -0px;
+    transition: 0.5s;
+}
+
+.btn_edit:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+.btn_edit:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
+/*End Banner Section*/
+/*Start Search Section*/
+
+.search_area {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 70px 0px;
+    background-color: #030303;
+    background-image:
+        radial-gradient(at 47% 33%, hsl(0.00, 70%, 7.000000000000001%) 0, transparent 59%),
+        radial-gradient(at 82% 65%, hsl(10.56, 100%, 49%) 0, transparent 55%);
+}
+
+.form_bg {
+    margin: 35px 0px;
+    padding: 25px 0px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+.search_heading{}
+.search_heading h2{
+    font-size: 36px;
+    color: black;
+    padding: 25px 0px;
+}
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group-text {
+    padding-bottom: 16px;
+}
+
+.javascript-condational-form {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.javascript-condational-form form label {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.javascript-condational-form form select {
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+    color: #666;
+    text-align: center;
+    
+}
+
+.javascript-condational-form form select option {
+    font-size: 16px;
+    color: #333;
+}
+
+.custom-select {
+    height: auto;
+}
+
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+    padding: 6px 0px;
+    color: gray;
+    border-radius: 5px;
+    border: 1px solid #CED4DA;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: gray;
+}
+
+input[type="submit"] {
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+/*Search Btn Start*/
+.btn_hover {
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 400;
+    color: #313133;
+}
+
+.button {
+    min-width: 300px;
+    min-height: 60px;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(255, 7, 7, 0.49) 0%, rgba(233, 252, 3, 0.26) 100%);
+    border: none;
+    border-radius: 35px;
+    box-shadow: 12px 12px 24px rgba(9, 11, 4, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    margin: 40px 0px;
+}
+
+.btn_hover::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    width: 100%;
+    height: 100%;
+    border: 6px solid #ff0000;
+    box-shadow: 0 0 60px rgba(255, 0, 0, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+.btn_hover:hover::before,
+.btn_hover:focus::before {
+    opacity: 1;
+}
+
+.btn_hover::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #ff0a00;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+.btn_hover:hover::after,
+.btn_hover:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
+/*Search Btn End*/
+
+
+
+/*Registration Form Start*/
+.form-control {
+    width: 30%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+label {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    margin-right: 50px;
+    margin-left: 10px;
+    margin: 10px 50px 10px 10px;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+    background: #fff;
+}
+
+.dataTables_wrapper .dataTables_info {
+    padding-left: 20px;
+}
+
+/*main data table style sheet end*/
+/*registation form start*/
+.main_register_form_area {
+    padding: 120px 0px;
+}
+
+.bg-success {
+    background-color: #f9fafb !important;
+}
+
+/*registation form end*/
+.main_register_form_area{
+    background: url(../images/helpcenter.png) no-repeat fixed 0 0 / 100% 100%;
+}
+.reg_form_bg {
+   background: rgba( 231, 220, 220, 0.65 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group-text {
+    padding-bottom: 16px;
+}
+
+.javascript-condational-form {
+    overflow: hidden;
+    text-align: left;
+}
+
+.javascript-condational-form form label {
+    font-size: 16px;
+    margin-right: 8px;
+    text-align: center
+}
+
+.javascript-condational-form form select {
+    font-size: 16px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+    color: #333;
+    
+    
+}
+
+.javascript-condational-form form select option {
+    font-size: 16px;
+    color: #333;
+    
+}
+
+.custom-select {
+    height: auto;
+}
+
+select,
+textarea {
+    color: black;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+    padding: 6px 0px;
+    color: gray;
+    border-radius: 5px;
+    background: none;
+    border-style: solid;
+    border-width: 2px;
+    -o-border-image: -o-linear-gradient(left, rgba(255, 8, 68, 1), rgba(255, 168, 142, 1));
+    border-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 8, 68, 1)), to(rgba(255, 168, 142, 1)));
+    border-image: linear-gradient(to right, rgba(255, 8, 68, 1), rgba(255, 168, 142, 1));
+    border-image-slice: 1;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: black;
+}
+
+.blood_yes {
+
+    width: 100%;
+}
+
+.blood_checkbox {
+    font-size: 16px;
+    width: 100%;
+  
+    border-radius: 3px;
+    padding: 5px;
+    color: black;
+    margin: 10px 0px;
+    border-radius: 5px;
+    display: block;
+     border-style: solid;
+    border-width: 2px;
+    -o-border-image: -o-linear-gradient(left, rgba(255, 8, 68, 1), rgba(255, 168, 142, 1));
+    border-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 8, 68, 1)), to(rgba(255, 168, 142, 1)));
+    border-image: linear-gradient(to right, rgba(255, 8, 68, 1), rgba(255, 168, 142, 1));
+    border-image-slice: 1;
+    padding: 7px;
+    border-radius: 5px;
+    background: none;
+}
+
+.check {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+
+.check:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+
+.check input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+
+.check .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    
+}
+
+.form_group_check {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex_group {
+    display: block;
+}
+
+.javascript-condational-form {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.form_search_width {
+	text-align: center;
+	width: 55%;
+}
+.form-control {
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    -o-border-image: -o-linear-gradient(left, rgba(255, 8, 68, 1), rgba(255, 168, 142, 1));
+    border-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 8, 68, 1)), to(rgba(255, 168, 142, 1)));
+    border-image: linear-gradient(to right, rgba(255, 8, 68, 1), rgba(255, 168, 142, 1));
+    border-image-slice: 1;
+    padding: 7px;
+    border-radius: 5px;
+    background: none;
+
+}
+.input-group > .form-control:focus, .input-group > .form-select:focus {
+	z-index: 3;
+	background: none;
+}
+.form-control:focus {
+	color: #212529;
+	background-color: none;
+	border-color: none;
+	outline: 0;
+	box-shadow: none;
+    
+}
+.sub_btn_2{
+    text-align: center;
+    margin: 10px 0px;
+}
+/*registation form end*/
